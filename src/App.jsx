@@ -1,72 +1,46 @@
+import LuxuryLayout from './components/LuxuryLayout'
+import Hero3D from './components/Hero3D'
+
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Subtle pattern overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.05),transparent_50%)]"></div>
+    <LuxuryLayout>
+      <Hero3D />
 
-      <div className="relative min-h-screen flex items-center justify-center p-8">
-        <div className="max-w-2xl w-full">
-          {/* Header with Flames icon */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center mb-6">
-              <img
-                src="/flame-icon.svg"
-                alt="Flames"
-                className="w-24 h-24 drop-shadow-[0_0_25px_rgba(59,130,246,0.5)]"
-              />
-            </div>
-
-            <h1 className="text-5xl font-bold text-white mb-4 tracking-tight">
-              Flames Blue
-            </h1>
-
-            <p className="text-xl text-blue-200 mb-6">
-              Build applications through conversation
-            </p>
-          </div>
-
-          {/* Instructions */}
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-8 shadow-xl mb-6">
-            <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                1
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Describe your idea</h3>
-                <p className="text-blue-200/80 text-sm">Use the chat panel on the left to tell the AI what you want to build</p>
+      {/* Final symbol section */}
+      <section className="relative bg-[#070a0d]">
+        <div className="max-w-6xl mx-auto px-6 py-24 md:py-40">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-3xl md:text-5xl font-bold leading-tight">
+                The Artifact resolves into a new emblem
+              </h3>
+              <p className="mt-4 text-cyan-100/80">
+                By intent and iteration, the organic and the crystalline lock as one. Present your new category with poise: define it below and let the symbol glow with meaning.
+              </p>
+              <div className="mt-6 flex items-center gap-3">
+                <input
+                  id="category"
+                  placeholder="e.g., Cognitive Luxury Systems"
+                  className="w-full md:w-auto flex-1 bg-[#0b0f14] border border-cyan-500/20 focus:border-cyan-400/50 outline-none text-cyan-50 placeholder:text-cyan-200/40 rounded-lg px-4 py-3 shadow-[0_0_0_1px_rgba(18,64,160,0.15)_inset]"
+                />
+                <button className="shrink-0 bg-gradient-to-br from-[#e8c77a] to-[#cfa44b] text-black font-semibold px-5 py-3 rounded-lg shadow-[0_6px_40px_rgba(207,164,75,0.35)] hover:shadow-[0_8px_44px_rgba(207,164,75,0.45)] transition-shadow">
+                  Engrave
+                </button>
               </div>
             </div>
 
-            <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                2
+            <div className="relative">
+              <div className="aspect-square rounded-2xl bg-[radial-gradient(60%_60%_at_50%_50%,rgba(14,28,44,0.7),rgba(7,10,13,1))] border border-cyan-500/10 shadow-[inset_0_0_80px_rgba(12,96,192,0.2)] flex items-center justify-center">
+                <div className="text-3xl md:text-5xl font-black tracking-wide bg-clip-text text-transparent" style={{backgroundImage:'linear-gradient(180deg,#e8c77a,#cfa44b,#6aa6ff)'}}>
+                  YOUR SYMBOL
+                </div>
               </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Watch it build</h3>
-                <p className="text-blue-200/80 text-sm">Your app will appear in this preview as the AI generates the code</p>
-              </div>
+              <div className="absolute -inset-6 -z-[0] rounded-3xl bg-[conic-gradient(from_120deg_at_50%_50%,rgba(207,164,75,0.18),transparent_25%,rgba(16,74,153,0.25),transparent_70%,rgba(207,164,75,0.18))] blur-2xl" />
             </div>
-
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                3
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Refine and iterate</h3>
-                <p className="text-blue-200/80 text-sm">Continue the conversation to add features and make changes</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Footer */}
-          <div className="text-center">
-            <p className="text-sm text-blue-300/60">
-              No coding required • Just describe what you want
-            </p>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </LuxuryLayout>
   )
 }
 
